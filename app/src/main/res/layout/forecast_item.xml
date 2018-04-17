@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/info_text"
+        android:textColor="#FFFFFF"
+        tools:text="date_text"/>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/date_text"
+        app:layout_constraintEnd_toStartOf="@+id/max_text"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        tools:text="info_text"/>
+
+    <TextView
+        android:id="@+id/max_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/info_text"
+        app:layout_constraintEnd_toStartOf="@+id/min_text"
+        android:gravity="end"
+        android:textColor="#FFFFFF"
+        tools:text="max_text"/>
+
+    <TextView
+        android:id="@+id/min_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/max_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="end"
+        android:textColor="#FFFFFF"
+        tools:text="min_text"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -6,10 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +25,10 @@ import com.star.coolweather.util.Utility;
 
 import java.io.IOException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
@@ -236,8 +236,8 @@ public class WeatherActivity extends AppCompatActivity {
             TextView minText = view.findViewById(R.id.min_text);
             dateText.setText(forecast.getDate());
             infoText.setText(forecast.getMore().getInfo());
-            maxText.setText(forecast.getTemprature().getMax());
-            minText.setText(forecast.getTemprature().getMin());
+            maxText.setText(forecast.getTemperature().getMax());
+            minText.setText(forecast.getTemperature().getMin());
 
             mForecastLayout.addView(view);
         }

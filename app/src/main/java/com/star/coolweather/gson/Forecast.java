@@ -9,7 +9,7 @@ public class Forecast {
     private String mDate;
 
     @SerializedName("tmp")
-    private Temperature mTemprature;
+    private Temperature mTemperature;
 
     @SerializedName("cond")
     private More mMore;
@@ -22,12 +22,12 @@ public class Forecast {
         mDate = date;
     }
 
-    public Temperature getTemprature() {
-        return mTemprature;
+    public Temperature getTemperature() {
+        return mTemperature;
     }
 
-    public void setTemprature(Temperature temprature) {
-        mTemprature = temprature;
+    public void setTemperature(Temperature temperature) {
+        mTemperature = temperature;
     }
 
     public More getMore() {

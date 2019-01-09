@@ -19,7 +19,7 @@ import com.star.coolweather.db.Province;
 import com.star.coolweather.util.HttpUtil;
 import com.star.coolweather.util.Utility;
 
-import org.litepal.crud.DataSupport;
+import org.litepal.LitePal;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -137,7 +137,7 @@ public class ChooseAreaFragment extends Fragment {
         mTitleText.setText(R.string.china);
         mBackButton.setVisibility(View.GONE);
 
-        mProvinceList = DataSupport.findAll(Province.class);
+        mProvinceList = LitePal.findAll(Province.class);
 
         if (mProvinceList.size() > 0) {
             mDataList.clear();
@@ -159,7 +159,7 @@ public class ChooseAreaFragment extends Fragment {
         mTitleText.setText(mSelectedProvince.getProvinceName());
         mBackButton.setVisibility(View.VISIBLE);
 
-        mCityList = DataSupport.where(COLUMN_NAME_PROVINCE_ID + " = ?",
+        mCityList = LitePal.where(COLUMN_NAME_PROVINCE_ID + " = ?",
                 String.valueOf(mSelectedProvince.getProvinceId())).find(City.class);
 
         if (mCityList.size() > 0) {
@@ -185,7 +185,7 @@ public class ChooseAreaFragment extends Fragment {
         mTitleText.setText(mSelectedCity.getCityName());
         mBackButton.setVisibility(View.VISIBLE);
 
-        mCountyList = DataSupport.where(COLUMN_NAME_CITY_ID + " = ?",
+        mCountyList = LitePal.where(COLUMN_NAME_CITY_ID + " = ?",
                 String.valueOf(mSelectedCity.getCityId())).find(County.class);
 
         if (mCountyList.size() > 0) {

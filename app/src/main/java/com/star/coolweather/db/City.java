@@ -1,9 +1,9 @@
 package com.star.coolweather.db;
 
-import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 
 
-public class City extends DataSupport {
+public class City extends LitePalSupport {
 
     private int mId;
     private int mCityId;

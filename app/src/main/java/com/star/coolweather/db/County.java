@@ -1,9 +1,9 @@
 package com.star.coolweather.db;
 
-import org.litepal.crud.DataSupport;
+import org.litepal.crud.LitePalSupport;
 
 
-public class County extends DataSupport {
+public class County extends LitePalSupport {
 
     private int mId;
     private int mCountyId;

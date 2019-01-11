@@ -127,7 +127,6 @@ public class WeatherActivity extends AppCompatActivity {
         } else {
 
             mWeatherId = getIntent().getStringExtra(WEATHER_ID);
-
             mWeatherLayout.setVisibility(View.INVISIBLE);
 
             requestWeather(mWeatherId);

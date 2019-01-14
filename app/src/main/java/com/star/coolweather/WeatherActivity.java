@@ -180,7 +180,6 @@ public class WeatherActivity extends AppCompatActivity {
                 final Weather weather = Utility.handleWeatherResponse(responseText);
 
                 runOnUiThread(() -> {
-
                     if (weather != null && OK.equals(weather.getStatus())) {
 
                         SharedPreferences.Editor editor =

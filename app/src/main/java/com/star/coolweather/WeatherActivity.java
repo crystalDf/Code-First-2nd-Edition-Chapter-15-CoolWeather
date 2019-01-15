@@ -275,7 +275,6 @@ public class WeatherActivity extends AppCompatActivity {
                 final String bingPic = response.body().string();
 
                 runOnUiThread(() -> {
-
                     SharedPreferences.Editor editor =
                             PreferenceManager.getDefaultSharedPreferences(
                                     WeatherActivity.this).edit();

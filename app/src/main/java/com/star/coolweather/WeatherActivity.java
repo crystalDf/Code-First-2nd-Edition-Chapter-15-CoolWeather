@@ -237,7 +237,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
         if (weather.getAQI() != null) {
-
             mAQI.setText(weather.getAQI().getCity().getAQI());
             mPM25.setText(weather.getAQI().getCity().getPM25());
         }

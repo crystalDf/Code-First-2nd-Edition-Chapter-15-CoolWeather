@@ -120,7 +120,6 @@ public class WeatherActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(weatherString)) {
 
             Weather weather = Utility.handleWeatherResponse(weatherString);
-
             mWeatherId = weather.getBasic().getWeatherId();
             
             showWeatherInfo(weather);

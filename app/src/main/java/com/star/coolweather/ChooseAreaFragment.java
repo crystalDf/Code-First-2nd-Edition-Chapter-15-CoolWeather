@@ -272,6 +272,7 @@ public class ChooseAreaFragment extends Fragment {
             mProgressBar = new ProgressBar(getActivity());
             mProgressBar.setIndeterminate(true);
         }
+
         mProgressBar.setVisibility(View.VISIBLE);
     }
 

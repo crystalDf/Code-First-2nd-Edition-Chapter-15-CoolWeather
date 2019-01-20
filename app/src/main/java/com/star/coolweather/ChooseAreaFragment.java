@@ -245,7 +245,6 @@ public class ChooseAreaFragment extends Fragment {
 
                 if (result) {
                     getActivity().runOnUiThread(() -> {
-
                         closeProgressBar();
 
                         switch (queryParam) {
